@@ -22,3 +22,21 @@ This lab explores bit-banging to control an individually addressable RGB LED usi
 
 ## Results
 The RGB LED cycles through predefined colors.
+
+# Lab 2b: Extending to C
+
+## Overview
+This lab demonstrates how to integrate assembly code into a C-based project for efficient and flexible programming.
+
+## Objectives
+- Create a mixed C/Assembly project.
+- Package assembly instructions into a reusable library.
+
+## Key Files
+- `main.c`: Main program in C.
+- `asmLibrary.s`: Assembly functions for RGB LED control.
+- `library.h`: Header file for assembly functions.
+
+## Results
+The RGB LED is controlled using a mix of C and assembly code.
+
