@@ -1,0 +1,50 @@
+# Smart Plant Monitoring System
+
+## Overview
+
+The **Smart Plant Monitoring System** is designed to provide real-time monitoring of environmental conditions for plants, enhancing their growth and care through automation and precise data acquisition. 
+
+## Purpose
+
+To create a smart, user-friendly system that offers real-time monitoring of environmental parameters such as light intensity and soil moisture. This system helps users maintain optimal conditions for plant health.
+
+## Solution
+
+The solution involves an automated system built with a PIC24 microcontroller and various sensors. It collects data on light intensity and soil moisture and displays real-time information on an LCD screen. Key features include:
+- Light intensity measurement using the TSL2561 sensor.
+- Soil moisture detection through an ADC-based voltage reading.
+- Real-time updates displayed on an LCD with scrolling messages.
+- Threshold-based alerts for insufficient light and moisture conditions.
+
+## Features
+
+- **Real-Time Monitoring:** Constant updates on light and moisture levels.
+- **User-Friendly Interface:** Clear and informative messages displayed on a 16x2 LCD screen.
+- **Automation:** Scrolling messages and threshold-based decision-making for alerts.
+- **Efficient Hardware Usage:** Utilizes I2C communication, interrupts, and buffering for efficient performance.
+
+## Hardware Requirements
+
+- PIC24 Microcontroller
+- TSL2561 Light Sensor
+- Soil Moisture Sensor
+- 16x2 LCD Display
+- Supporting components: resistors, capacitors, and power supply.
+
+## Software Details
+
+The software is implemented in C, using MPLAB X IDE and XC16 compiler. Key modules include:
+- **I2C Communication:** Handles data exchange with the light sensor and LCD.
+- **ADC Integration:** Converts analog soil moisture data to digital values.
+- **Interrupts:** Ensures efficient handling of ADC conversions and data processing.
+- **Display Management:** Scrolls messages on the LCD to provide continuous updates.
+
+## How It Works
+
+1. **Initialization:** Configure the microcontroller, ADC, I2C, and sensors.
+2. **Data Acquisition:**
+   - Light sensor reads light levels via I2C.
+   - ADC reads soil moisture voltage.
+3. **Processing:** Threshold checks determine if light and moisture conditions are sufficient.
+4. **Display Updates:** Messages are scrolled on the LCD to inform users of the current status.
+5. **Continuous Operation:** The system operates in an infinite loop, updating data and displays periodically.
